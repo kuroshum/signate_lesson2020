@@ -42,3 +42,15 @@ print(f"col x row vectors:\n{colXrow}\n")
 # 行列のアダマール（要素ごとの積）積
 g_H = W*H
 print("g(H):\n{}\n".format(g_H))
+
+
+# 宿題1
+# ソフトマックス
+def softmax(a):
+	x = np.exp(a)
+	u = np.sum(x)
+	return x/u
+
+
+b = softmax(np.matmul(W.T, x) + b)
+print(f"宿題1 ソフトマックス:\n{b}")
