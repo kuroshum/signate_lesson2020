@@ -8,7 +8,7 @@ import numpy as np
 # -------------------
 # クラスの定義始まり
 class Sentence:
-	dataPath = 'sentiment_labelled_sentences'  # データのフォルダ名
+	dataPath = ''  # データのフォルダ名
 
 	# ------------------------------------
 	# CSVファイルの読み込み
@@ -32,6 +32,10 @@ class Sentence:
 		# np.arrayとして返す
 		return self.data['sentence'][results].values
 
+	# 宿題2-1
+	def get_positive_sentence(self):
+		return self.data[self.data['score'] == 1]['sentence'].values
+
 
 # ------------------------------------
 
@@ -42,10 +46,13 @@ class Sentence:
 # メインの始まり
 if __name__ == "__main__":
 	# データファイルamazon_cells_labelled.txtを指定して、インスタンス化
-	myData = sentence("amazon_cells_labelled.txt")
+	myData = Sentence("amazon_cells_labelled.txt")
 
 	# 検索
 	results = myData.search("very good")
+
+	# 宿題2-1
+	results = myData.get_positive_sentence()
 
 	# 検索結果の表示
 	for ind in np.arange(len(results)):
