@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+# import pdb
 
 
 def exercise1():
@@ -20,5 +21,19 @@ def exercise1():
 	print(d_dataframe)
 
 
+def exercise2():
+	a = np.array([[1, 3, 2], [-1, 0, 1], [2, 3, 0]])
+	a_inv = np.linalg.inv(a)
+	print(a_inv)
+	print(np.matmul(a, a_inv))
+
+
+def homework1():
+	# 別にファイル作成
+	pass
+
+
 if __name__ == '__main__':
 	exercise1()
+	exercise2()
+	homework1()
