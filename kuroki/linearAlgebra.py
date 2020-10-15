@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 # 数値計算用のライブラリnumpyをnpとしてインポート
 import numpy as np
-import pdb
+# import pdb
 
 # 3x3のnumpy配列（行列）
 W = np.array([[1, 0, 0], [0, 1/2, 0], [0, 0, 1/3]])

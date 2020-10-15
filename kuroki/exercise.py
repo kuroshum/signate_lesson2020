@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 # import pdb
+import matplotlib.pylab as plt
 
 
 def exercise1():
@@ -28,12 +29,12 @@ def exercise2():
 	print(np.matmul(a, a_inv))
 
 
-def homework1():
-	# 別にファイル作成
-	pass
+def exercise3(values):
+	print(values)
+	print([1 if i >= 5 else -1 for i in values])
 
 
 if __name__ == '__main__':
 	exercise1()
 	exercise2()
-	homework1()
+	exercise3([10, 3, 1, 5, 8, 6])
