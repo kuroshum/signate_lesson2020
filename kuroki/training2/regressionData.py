@@ -212,4 +212,10 @@ class artificial:
 			
 		return limit
 	# ------------------------------------
+
+	def train(self):
+		xTrain = np.append(self.xTrain, np.ones((1, self.xTrain.shape[1])), axis=0)
+		# w = np.matmul(np.linalg.inv(np.matmul(xTrain, xTrain.T)), np.sum([y * xTrain[:, index] for index, y in enumerate(self.yTrain)], axis=0))
+		w = np.matmul(np.linalg.inv(np.matmul(xTrain, xTrain.T)), np.sum(self.yTrain * xTrain, axis=1))
+		return w
 # ------------------------------------
