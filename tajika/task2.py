@@ -35,7 +35,7 @@ class sentence:
 	def plotScoreRatio(self,keyword):
 		hasthewordlst=self.data["sentence"].str.contains(keyword)
 		intersected=hasthewordlst & self.data['score']==1
-		posrate=np.count_nonzero(intersected)/len(self.data)
+		posrate=np.count_nonzero(intersected)/np.count_nonzero(hasthewordlst)
 		negarate=1-posrate
 		plt.bar((0,1),(negarate,posrate),tick_label=("negative","positive"),align="center")
 
