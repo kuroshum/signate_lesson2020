@@ -1,0 +1,569 @@
+演習１
+(base) AAAir:data_zemi A$ python list_numpy_dataframe.py
+要素の追加前： ['Yamada Taro' 'Yamada Hanako'] [172.5 160.5]
+要素の追加後： ['Yamada Taro' 'Yamada Hanako' 'Wakayama Dai'] [172.5 160.5 180.2]
+-------
+
+全ての要素: ['Yamada Taro' 'Yamada Hanako' 'Wakayama Dai']
+0番目の要素: Yamada Taro
+1番目までの要素: ['Yamada Taro' 'Yamada Hanako']
+最後の要素: Wakayama Dai
+0から1番目までの要素: ['Yamada Taro' 'Yamada Hanako']
+170以上のインデックス: (array([0, 2]),)
+170以上の要素: ['Yamada Taro' 'Wakayama Dai']
+-------
+
+d_dataframe:
+             name  height
+0    Yamada Taro   172.5
+1  Yamada Hanako   160.5
+2   Wakayama Dai   180.2 
+
+name列:
+ 0      Yamada Taro
+1    Yamada Hanako
+2     Wakayama Dai
+Name: name, dtype: object 
+
+height列のインデックス0番: 172.5 
+
+d_dataframe(add:age):
+             name  height  age
+0    Yamada Taro   172.5   21
+1  Yamada Hanako   160.5   19
+2   Wakayama Dai   180.2   30 
+
+演習２
+(base) AAAir:data_zemi A$ python exercise2.py
+A:
+[[ 1  3  2]
+ [-1  0  1]
+ [ 2  3  0]]
+
+A_inv:
+[[ 1.         -2.         -1.        ]
+ [-0.66666667  1.33333333  1.        ]
+ [ 1.         -1.         -1.        ]]
+
+A_A_inv:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+
+宿題１
+P:
+[[0.09003057]
+ [0.24472847]
+ [0.66524096]]
+
+演習３
+(base) AAAir:data_zemi A$ python for_loop.py
+5以上の値 [10  8  6]
+5以上の値 [10  8  6]
+values
+ [10  3  1  5  8  6]
+convert_values
+ [ 1 -1 -1  1  1  1]
+
+宿題２
+(base) AAAir:data_zemi A$ python sentenceData.py
+0 : Good case, Excellent value.
+1 : Great for the jawbone.
+2 : The mic is great.
+3 : If you are Razr owner...you must have this!
+4 : And the sound quality is great.
+5 : He was very impressed when going from the original battery to the extended battery.
+6 : Very good quality though
+7 : Highly recommend for any one who has a blue tooth phone.
+8 : So Far So Good!.
+9 : Works great!.
+10 : I bought this to use with my Kindle Fire and absolutely loved it!
+11 : I have yet to run this new battery below two bars and that's three days without charging.
+12 : Great Pocket PC / phone combination.
+13 : I've owned this phone for 7 months now and can say that it's the best mobile phone I've had.
+14 : This product is ideal for people like me whose ears are very sensitive.
+15 : Car charger as well as AC charger are included to make sure you never run out of juice.Highy recommended
+16 : It has kept up very well.
+17 : The case is great and works fine with the 680.
+18 : It has a great camera thats 2MP, and the pics are nice and clear with great picture quality.
+19 : Nice headset priced right.
+20 : Excellent bluetooth headset.
+21 : It has all the features I want
+22 : This case seems well made.
+23 : good protection and does not make phone too bulky.
+24 : A usable keyboard actually turns a PDA into a real-world useful machine instead of just a neat gadget.
+25 : This phone is pretty sturdy and I've never had any large problems with it.
+26 : I love this thing!
+27 : Everything about it is fine and reasonable for the price i.e.
+28 : I even dropped this phone into a stream and it was submerged for 15 seconds and it still works great!
+29 : I have been very happy with the 510 and have had NO complaints from any one regarding my sound quality on their end.
+30 : I really recommend this faceplates since it looks very nice, elegant and cool.
+31 : These headphones were a great find - and I think they are perhaps the best purchase I've made in the last several years - seriously.
+32 : It feels more comfortable than most headsets because I wear glasses and that gets in the way sometimes.
+33 : Great for iPODs too.
+34 : This device is great in several situations:1.)
+35 : Great choice!
+36 : Nice docking station for home or work.
+37 : This is a beautiful phone.
+38 : Love this product.
+39 : This is a great little item.
+40 : I love this phone , It is very handy and has a lot of features .
+41 : I wear it everyday and it holds up very well.
+42 : Well packaged, arrived on time, and works as intended.
+43 : The headsets are easy to use and everyone loves them.
+44 : This phone works great.
+45 : Product was excellent and works better than the verizon one and Boy was it cheaper!
+46 : The phone loads super!
+47 : Made very sturdy.
+48 : Worked great!.
+49 : Will order from them again!
+50 : Best I've found so far .... I've tried 2 other bluetooths and this one has the best quality (for both me and the listener) as well as ease of using.
+51 : Integrated seamlessly with the Motorola RAZR phone.
+52 : Definitely a bargain.
+53 : The price was very good and with the free shipping and all it was a good purchase.
+54 : Pros:-Good camera - very nice pictures , also has cool styles like black and white, and more.
+55 : I love my 350 headset.. My Jabra350 bluetooth headset is great, the reception is very good and the ear piece is a comfortable fit.
+56 : Sound quality on both end is excellent, I use headset to call my wife and ask my wife to use headset to call me !2.
+57 : This phone is slim and light and the display is beautiful.
+58 : its a little geeky but i think thats its sex on toast and it rocks and oozes sex right down to its battery embedded sleek stylish leather case.
+59 : Great product, fast shipping!.
+60 : Absolutely great.
+61 : The keyboard is a nice compromise between a full QWERTY and the basic cell phone number keypad.
+62 : It is very comfortable on the ear.
+63 : It has been a winner for us.
+64 : )Setup couldn't have been simpler.
+65 : I've tried several different earpieces for my cell phone and this Jabra one is the first one I've found that fits my ear comfortably.
+66 : Iam very pleased with my purchase.
+67 : Gets the job done.
+68 : Great audio!.
+69 : I've only had my bluetooth for a few weeks, but I really like it.
+70 : It is so small and you don't even realize that it is there after a while of getting used to it.
+71 : The accompanied software is almost brilliant.
+72 : Headset works great & was packaged nicely to avoid any damage.
+73 : !I definitly recommend!!
+74 : Very good stuff for the price.
+75 : My headset works just peachy-keen.
+76 : Voice recognition is tremendous!
+77 : I got this phone on reccomendation from a relative and I'm glad I did.
+78 : I had absolutely no problem with this headset linking to my 8530 Blackberry Curve!
+79 : I know that sounds funny, but to me it seemed like sketchy technology that wouldn't work well.Well, this one works great.
+80 : This phone is very fast with sending any kind of messages and web browsing is significantly faster than previous phones i have used.
+81 : Nice quality build, unlike some cheap s*** out there.
+82 : This item is fantastic and works perfectly!
+83 : And I just love the colors!
+84 : W810i is just SUPERB.
+85 : Great charger.
+86 : Works like a charm; it work the same as the one I got with the phone.
+87 : Great Value.
+88 : The look of it is very sharp and the screen is nice and clear, with great graphics.
+89 : EXCELLENT SERVICE!!!!!!!!.
+90 : The iGo chargers and tips are really great.
+91 : The file browser offers all the options that one needs.Handsfree is great.
+92 : Superb Phone on a Great Network.
+93 : I connected my wife's bluetooth,(Motorola HS850) to my phone and it worked like a charm whether the phone was in my pocket or the case.
+94 : The sound quality is good and functionality is awesome.
+95 : Incredible!.
+96 : Great phone!.
+97 : Any ring tone..Overall good phone to buy..
+98 : Lately they have been extremely nice and helpful on the phone.
+99 : Light weight, I hardly notice it is there.
+100 : You'll love how thin it is.
+101 : The color is even prettier than I thought it would be, and the graphics are incredibly sharp.
+102 : All in all I think it was a good investment.
+103 : The best electronics of the available FM Transmitters.
+104 : great headset, very impressed - H500.
+105 : The "1.2" mega pixel camera, being a part of a phone, is reasonably good7.
+106 : I've had this for nearly 2 years and it has worked great for me.
+107 : Good transmit audio.
+108 : Great price also!
+109 : The range is very decent, I've been able to roam around my house with the phone in the living room with no reception/sound quality issues.
+110 : fast service.
+111 : I would highly recommend this.
+112 : I would recommend this.
+113 : I'm still infatuated with this phone.
+114 : Simple, lightweight and great fit.
+115 : These are certainly very comfortable and functionality is decent.
+116 : I usually don't like headbands but this one is very lightweight & doesn't mess up my hair.
+117 : Great sound and service.
+118 : Really pleased with this product so far.
+119 : One of my favorite purchases ever.
+120 : best bluetooth on the market.
+121 : Authentic leather with nice shine and comfort .I recommend you this case !!
+122 : I was very excited to get this headset because I thought it was really cute.
+123 : Worth every penny.
+124 : Excellent wallet type phone case.
+125 : Nice headphones for the price and they work great!
+126 : It is very comfortable to wear as well, which is probably the most important aspect about using a case.
+127 : It's fits like a glove and is strong, secure, and durable.
+128 : O my gosh the best phone I have ever had.
+129 : It's very attractive and appears to be of good quality.
+130 : I love all the features and form factor.
+131 : Great Earpiece.
+132 : Excellent hands free tool.
+133 : Great for using with your home stereo.
+134 : Good product - incredible value.
+135 : Only had this a month but it's worked flawlessly so far.
+136 : Works great.
+137 : Battery life is real good.
+138 : It's a great item.
+139 : Love this headset!
+140 : Worked perfectly!
+141 : I gave it 5 stars because of the sound quality.
+142 : Reversible plug works great.
+143 : Very good phone.
+144 : Best of all is the rotating feature, very helpful.
+145 : Comfort for our whole family.
+146 : Good product, good seller.
+147 : I love this bluetooth!
+148 : I am very impressed with this headset from Plantronics.
+149 : I got it because it was so small and adorable.
+150 : Great phone!.
+151 : This item is great, installed it, let it charged up overnite and it has been working good every since with no problems
+152 : Great Phone.
+153 : Excellent Phone.
+154 : The voice recognition thru the handset is excellent.
+155 : This is hands down the best phone I've ever had.
+156 : Works great, when my cat attacked the phone he scratched the protective strip instead of destroying the screen.
+157 : This one works and was priced right.
+158 : Now I know that I made a wise decision.
+159 : Someone shouldve invented this sooner.
+160 : Good price.
+161 : Everything worked on the first try.The device was certainly engineered in a clever way and the construction feels good.
+162 : I received it quickly and it works great!!
+163 : Has been working great.
+164 : This is a good battery, and it got here really fast.
+165 : Also its slim enough to fit into my alarm clock docking station without removing the case.
+166 : Phone now holds charge like it did when it was new.
+167 : We have gotten a lot of compliments on it.
+168 : This is definitely a must have if your state does not allow cell phone usage while driving.
+169 : I love this device.
+170 : I am also very happy with the price.
+171 : I was able to do voice dialing in the car with no problem.
+172 : good item, low price.
+173 : VERY comfortable.
+174 : The battery is working well as a replacement for the original that came with the phone over 2 years ago.
+175 : The reception is excellent!
+176 : It fits comfortably in either ear, the sound is clear and loud, and the charge lasts a couple of days.
+177 : very clear, quality sound and you don't have to mess with the sound on your iPod since you have the sound buttons on the headset.
+178 : Excellent sound quality.
+179 : New Battery works great in phone.
+180 : I've dropped my phone more times than I can say, even on concrete and my phone is still great (knock on wood!).
+181 : Good audio quality.
+182 : This little device has transformed my organizational capability and made my life a whole lot easier.
+183 : Works like a charm.. Works as advertised.
+184 : Comfortable, Nice Range, Good Battery Life.
+185 : The microphone also works well, but (according to people I have called) it applifies everything.
+186 : Nice design and quality.
+187 : It is light, easy to use, and has very clear reception and transmission.
+188 : It definitely was not as good as my S11.
+189 : awesome device.
+190 : I had ordered a motorola data cable, got a very well finished and working product.
+191 : Love This Phone.
+192 : I was looking for this headset for a long time and now that I've got it I couldn't be happier.
+193 : Display is excellent and camera is as good as any from that year.
+194 : Battery life is also great!
+195 : Protects the phone on all sides.
+196 : Clear Skype Calls, Long Battery Life, Long Range.
+197 : Great Hands Free Device.
+198 : you can even take self portraits with the outside (exterior) display, very cool.
+199 : After trying many many handsfree gadgets this is the one that finally works well.
+200 : Magical Help.
+201 : The best phone in market :).
+202 : It worked very well.
+203 : The company shipped my product very promptly and it works well.
+204 : Exactly what I wanted.
+205 : This is a great deal.
+206 : Excellent product, I am very satisfied with the purchase.
+207 : I highly recommend these and encourage people to give them a try.
+208 : Better than you'd expect.
+209 : Great product and price.
+210 : Sounds good reasonably priced and effective, Its that simple !
+211 : Very prompt service.
+212 : Excellent product for the price.
+213 : Very pleased with this headset.
+214 : I especially love the long battery life.
+215 : Works great.
+216 : Plantronics Bluetooth Excelent Buy.
+217 : I highly recommend this device to everyone!
+218 : Jawbone Era is awesome too!
+219 : I have used several phone in two years, but this one is the best.
+220 : An Awesome New Look For Fall 2000!.
+221 : Price is good too.
+222 : I'm using it with an iriver SPINN (with case) and it fits fine.
+223 : Overall, I am psyched to have a phone which has all my appointments and contacts in and gets great reception.
+224 : every thing on phone work perfectly, she like it.
+225 : IT'S REALLY EASY.
+226 : My Sanyo has survived dozens of drops on blacktop without ill effect.
+227 : Fantastic earphones.
+228 : It finds my cell phone right away when I enter the car.
+229 : I highly recommend this modest priced cellular phone.
+230 : But it does get better reception and clarity than any phone I've had before.
+231 : Awsome Device Works Great!!.
+232 : Restored my phone to like new performance.
+233 : I would recommend purchasing the Jabra JX-10 series 2 which works flawlessly with my Moto Q, go figure.
+234 : I searched the Internet, and found this one to be the best value.
+235 : Very happy with this product.
+236 : The screen size is big, key pad lit well enough, and the camera quality is excellent for a camera phone.
+237 : i'm glad i found this product on amazon it is hard to find, it wasn't high priced.
+238 : Portable and it works.
+239 : My colleague & I now get great reception.A little expensive, but performance is great.
+240 : Timely shipment and quality product.
+241 : Nice solid keyboard.
+242 : Very well made and fits my Surefire GX2 perfectly.
+243 : We would recommend these to others.
+244 : The battery works great!
+245 : Looks great and is strong."
+246 : I have had TMobile service for 2 or 3 years now, and I am pretty happy with it.
+247 : Great software for Motorolas.
+248 : The delivery was on time.
+249 : Very easy to use.
+250 : It holds a charge for a long time, is reasonably comfortable under long-wearing conditions and the quality of sound is tremendous.
+251 : The keyboard is really worthwhile in usefulness and is sturdy enough I don't expect any problems.
+252 : After charging overnight, these batteries work great.
+253 : You won't regret it!
+254 : I love this phone!.
+255 : This PDA rocks.
+256 : It is super charged up for use as a small hybrid palmtop/camera/cellphone, and excels in those roles.
+257 : I would definitely recommend the Jabra BT250v for those who are looking for comfort, clarity and a great price!
+258 : I had Verizon 2 years ago and really liked their service.
+259 : Works as described.
+260 : WELL IM SATISFIED.
+261 : The bose noise cancelling is amazing, which is very important for a NYC commuter.
+262 : This battery is an excellent bargain!
+263 : I wear glasses and it fits fine with them.
+264 : great...no problems at all!.
+265 : This frog phone charm is adorable and very eye catching.
+266 : The sound is clear and the people I talk to on it are amazed at the quality too.
+267 : I got the aluminum case for my new Palm VX and it worked really well--it has protected my handheld perfectly so far.
+268 : very good product, well made.
+269 : Mobile Phone Tools are a must have.
+270 : I am very impressed with the job that Motorola did on the sturdiness of this phone.
+271 : I received my orders well within the shipping timeframe, everything was in good working order and overall, I am very excited to have this source.
+272 : The phone is sturdy and waterproof.
+273 : Thanks again to Amazon for having the things I need for a good price!
+274 : I ended up sliding it on the edge of my pants or back pockets instead.
+275 : I had to go to a store and bought a new NOKIA phone which is working great.
+276 : Works great!.
+277 : The noise shield is incrediable.
+278 : Razr Battery - Good buy.
+279 : Keep up the good work Amazon!!
+280 : Great case and price!
+281 : Bluetooth range is good - a few days ago I left my phone in the trunk, got a call, and carried the conversation without a hitch.
+282 : Small, sleek, impressive looking, practical setup with ample storage in place.
+283 : The eargels channel the sound directly into your ear and seem to increase the sound volume and clarity.
+284 : I am glad I purchased it.
+285 : No shifting, no bubbling, no peeling, not even a scratch, NOTHING!I couldn't be more happier with my new one for the Droid.
+286 : I own a Jabra Earset and was very happy with it, but the sound quality, especially outgoing, on this is better.
+287 : I love the camera, it's really pretty good quality.
+288 : Thank you for such great service.
+289 : Its a total package.
+290 : The seller is very understanding and patient, I would definitely buy from them again.
+291 : Great product for the price!.
+292 : I have purchased these for both family and friends, and all enjoy their clarity and ease of use
+293 : Virgin Wireless rocks and so does this cheap little phone!
+294 : All in all, I'm quite satisfied with this purchase.
+295 : Great it was new packaged nice works good, no problems and it came in less time then I expected!!!!
+296 : Great Product.
+297 : This fixes all the problems.
+298 : I am very happy
+299 : I've had no trouble accessing the Internet, downloading ringtones or performing any of the functions.
+300 : It does everything the description said it would.
+301 : It works great with a car charger, especially if you cannot plug in two adapters at the same time.
+302 : It plays louder than any other speaker of this size; the price is so low that most would think the quality is lacking, however, it's not.
+303 : Better than expected.
+304 : Battery is holding up well.
+305 : Linked to my phone without effort.
+306 : THey are so cool!
+307 : Easy to use.
+308 : Better Than New.
+309 : A pretty good product.
+310 : This is a great phone!.
+311 : For the price on Amazon, it is an excellent product, which I would highly recommend.
+312 : Their Research and Development division obviously knows what they're doing.
+313 : Those phones are working just fine now.
+314 : I am more than happy with this product.
+315 : Overall, I would recommend this phone over the new Walkman.
+316 : It fits my ear well and is comfortable on.
+317 : clipping this to your belt will deffinitely make you feel like 50 cent's up-and-coming.
+318 : I like design and look of Jabra behing the ear headsets and 5020 is pretty comfortible to wear 24 hours a day without pain in the ear.
+319 : I was amazed at the quick arrival of the two original lg cell phone batteries and and at a fraction of the price.
+320 : Worked very well paired with a Treo 700w and as a Skype headset on my PC (using a USB Bluetooth transceiver).
+321 : This is a great product..... sure beats using your fingers!.
+322 : All the other cases I've tried normally fall apart after a few months but this one seems to be in for the long haul.
+323 : I recommend iGo to anyone with different brand cell phones/mp3 players in the family.
+324 : I posted more detailed comments under the grey or black phone, but i have the Fire Red and it's a great color!
+325 : I did not have any problem with this item and would order it again if needed.
+326 : Not only did the software do a great job of this, I could also make my own ringtones form my existing CDs without an internet connection.
+327 : im surprised this is a good quality car charger and there's not much reviews about it.
+328 : These are fabulous!
+329 : I used bitpim (a free program you can find on the internet)to transfer data to the phone.The price of the cable was excellent.
+330 : Very wind-resistant.
+331 : They do not last forever, but is not overly expensive to replace.Easy to operate and the sound is much better than others I have tried.
+332 : Phone is sturdy as all nokia bar phones are.
+333 : Great phone.
+334 : I'm pleased.
+335 : I found the product to be easy to set up and use.
+336 : No ear loop needed, it's tiny and the sound is great.
+337 : The handsfree part works fine, but then the car tries to download the address book, and the Treo reboots.Overall, I still rate this device high.
+338 : I'm happy about this purchase- good quality and low price.
+339 : I love the look and feel of Samsung flipphones.
+340 : Its well-designed and very sharp -- the blue is a very nice color.
+341 : Does everything it should and more.
+342 : Nice Sound.
+343 : Much less than the jawbone I was going to replace it with.
+344 : Setup went very smoothly.
+345 : It is well made, easy to access the phone and has a handy, detachable belt clip.
+346 : It works fine on my Motorola 325 cellphone, and a lot better than the worn-out battery did.
+347 : The volume for the ringer is REAL good (you have choices how loud).
+348 : I love the ringtones because they are so upbeat!
+349 : Easy to pair with my Samsung Cell.
+350 : Works well.
+351 : Clear crisp sound.
+352 : I have to use the smallest earpieces provided, but it stays on pretty well.
+353 : The phone can also take great pictures and even video clips.
+354 : Because both ears are occupied, background is not distracting at all.
+355 : Comfortable fit - you need your headset to be comfortable for at least an hour at a time, if not for an entire day.
+356 : You can't beat the price on these.
+357 : * Comes with a strong light that you can use to light up your camera shots, and even flash SOS signals (seriously!
+358 : lightweight and works well.
+359 : I love this cable - it allows me to connect any mini-USB device to my PC.
+360 : This is cool because most cases are just open there allowing the screen to get all scratched up.
+361 : Appears to actually outperform the original battery from China that came with my V325i.
+362 : jabra ear gels "R" the best!.
+363 : It quit working after I'd used it for about 18 months, so I just purchased another one because this is the best headset I've ever owned.
+364 : It was a great phone.
+365 : Good value, works fine - power via USB, car, or wall outlet.
+366 : My phone doesn't slide around my car now and the grip prevents my phone from slipping out of my hand.
+367 : This is simply the BEST bluetooth headset for sound quality!
+368 : In the span of an hour, I had two people exclaim "Whoa - is that the new phone on TV?!?
+369 : I have always used corded headsets and the freedom from the wireless is very helpful.
+370 : This case has passed the one year mark and while it shows signs of wear, it is 100% functional.
+371 : Other than that, the leather is nice and soft; the fit is very tight; the cut out for the face is a good shape.
+372 : It has everything I need and I couldn't ask for more.
+373 : This product is great... it makes working a lot easier I can go to the copier while waiting on hold for something.
+374 : T-Mobile has the best customer service anywhere.
+375 : Arrived quickly and much less expensive than others being sold.
+376 : Provides good protection and looks classy, too.
+377 : Krussel Always good.
+378 : The tracfonewebsite is user friendly and makes it easy toactivate, etc.
+379 : The design is very good.4.
+380 : I great reception all the time.
+381 : I would highly recommend this product.
+382 : Fantastic buy and will get again for whatever my next phone is
+383 : This BlueAnt Supertooth hands-free phone speaker is AWESOME.
+384 : .... Item arrived quickly and works great with my Metro PCS Samsung SCH-r450 slider phone and Sony Premium Sound in ear plugs.
+385 : It is light, has plenty of battery capacity, and is very confortable to wear for somewhat extended periods of time.
+386 : Blue Ant is easy to use.
+387 : Cheap but hey it works.. Was pleasantly suprised given the low cost of this item.
+388 : It's very convenient and simple to use - gets job done & makes the car ride so much smoother.
+389 : The sound quality is excellent as well.
+390 : Its the best headset I have used.
+391 : They have been around for years and carries the highest quality of anti-glare screen protector that I have found to date.
+392 : Just what I wanted.
+393 : Great product.
+394 : Crisp and Clear.
+395 : The reception has been generally good.
+396 : Excellent sound, battery life and inconspicuous to boot!.
+397 : Great bluetooth!.
+398 : I highly recommend this case.
+399 : WORTHWHILE.
+400 : This is a great deal.
+401 : It is simple to use and I like it.
+402 : It's a great tool for entertainment, communication, and data management.Oh, be sure to use ActiveSync 4.2 for optimal data synchronization results!
+403 : I own 2 of these cases and would order another.
+404 : Great Phone.
+405 : I bought this battery with a coupon from Amazon and I'm very happy with my purchase.
+406 : Perfect for the PS3.
+407 : Five star Plus, plus.
+408 : A good quality bargain.. I bought this after I bought a cheapy from Big Lots that sounded awful and people on the other end couldn't hear me.
+409 : Good , works fine.
+410 : For the price this was a great deal.
+411 : Great price, too!
+412 : Yes it's shiny on front side - and I love it!
+413 : The reception through this headset is excellent.
+414 : 2 thumbs up to this seller
+415 : I have a Verizon LG phone and they work well together, good reception and range that exceeds 20 feet line of sight.
+416 : #1 It Works - #2 It is Comfortable.
+417 : Battery charge-life is quite long.
+418 : The Jabra EarGels fit my ears very well.
+419 : Product is exactly as described.
+420 : Gets a signal when other Verizon phones won't.
+421 : I would recommend it.
+422 : Plan on ordering from them again and again.
+423 : That being said, for a phone, the camera is very nice; many cool effects to play with, and video is decent as well.
+424 : I have been very satisfied with this cell phone from day one.
+425 : They keep getting better and better (this is my third one and I've had numerous Palms too).
+426 : The shipping time was also very quick!
+427 : Good case!.
+428 : Really good product.
+429 : It looks very nice.
+430 : This is an excellent tool, especially when paired with your phone's auto-answer.
+431 : I have read other's reviews here but I haven't had any problem with it.
+432 : Comfortable in my hand.
+433 : (It works!)
+434 : So far it has worked like a charm.
+435 : I have only had it for a few weeks, but so far, so good.
+436 : But, in any case, the best part is, you can download these pictures to your laptop using IR, or even send pictures from your laptop to the phone.
+437 : Would recommend this item.
+438 : It's been my choice headset for years.Great sound; good volume; good noise cancellation.
+439 : Nice case, feels good in your hands.
+440 : Just really good.. So far, probably the best BT headset I have ever had.
+441 : Works fine.
+442 : I received my headset in good time and was happy with it.
+443 : I was very pleased to see that I could replace my well travled swivel holster for my Blackberry flip.
+444 : My sister has one also and she loves it.
+445 : Good Quality.
+446 : Excellent dual-purpose headset.
+447 : Excellent!.
+448 : It seems completely secure, both holding on to my belt, and keeping the iPhone inside.
+449 : The only good thing was that it fits comfortably on small ears.
+450 : I am pairing this with my iphone, and I could not be happier with it so far.
+451 : Best headset ever!!!.
+452 : It was that loud.Glad to say that the Plantronics 510 maintains a flawless connection to my cell and with no static during normal use.
+453 : Fits comfortably, came with three sizes of earbud tips.
+454 : Excellent product for the price.
+455 : It was quite comfortable in the ear.
+456 : Great phone.
+457 : The pairing of the two devices was so easy it barely took a couple minutes before I started making calls with the voice dialing feature.
+458 : The cutouts and buttons are placed perfectly.
+459 : I love being able to use one headset for both by land-line and cell.
+460 : But despite these few flaws, this case is of exceptional quality and well worth the additional costs of owning an official OEM product.
+461 : I can hear while I'm driving in the car, and usually don't even have to put it on it's loudest setting.
+462 : Seller shipped quickly and much cheaper than the competitors.
+463 : Good show, Samsung.
+464 : So I bought about 10 of these and saved alot of money.
+465 : Leopard Print is wonderfully wild!.
+466 : Works for me.
+467 : much better than the hard plastic cases.
+468 : Happy so far!.
+469 : cool phone.
+470 : Works good.
+471 : Motorola finally got the voice quality of a bluetooth headset right.
+472 : but it is great, i would really recommend it
+473 : You get extra minutes so that you can carry out the call and not get cut off."
+474 : The headset fulfills my requirements so I am happy with my purchase.
+475 : Logitech Bluetooth Headset is a 10!.
+476 : I like the fact that it rests lightly against your ear, rather than inside.
+477 : A lot of websites have been rating this a very good phone and so do I.
+478 : I have tried these cables with my computer and my iPod and it works just fine.
+479 : It is easy to turn on and off when you are in the car and the volume controls are quite accessable.
+480 : I have had mine for about a year and this Christmas I bought some for the rest of the family.
+481 : Otherwise, easy to install and use, clear sound.
+482 : nice leather.
+483 : It is a joy to use.
+484 : Very satisifed with that.
+485 : This is the phone to get for 2005.... I just bought my S710a and all I can say is WOW!
+486 : Just reading on the specs alone makes you say WOW.
+487 : Love it.. Great armband.
+488 : I really like this product over the Motorola because it is allot clearer on the ear piece and the mic.
+489 : I exchanged the sony ericson z500a for this and I'm pretty happy with that decision.
+490 : I was very impressed with the price of the cases.
+491 : Also makes it easier to hold on to.
+492 : I use this product in a motor control center where there is a lot of high voltage humming from the equipment, and it works great!
+493 : It's pretty easy.
+494 : Beautiful styling though.
+495 : Excellent product.
+496 : It is the best charger I have seen on the market yet.
+497 : SWEETEST PHONE!!!
+498 : :-)Oh, the charger seems to work fine.
+499 : It fits so securely that the ear hook does not even need to be used and the sound is better directed through your ear canal.
