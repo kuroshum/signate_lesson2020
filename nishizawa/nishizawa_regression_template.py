@@ -54,6 +54,7 @@ class linearRegression():
             return y
         else:
             k1 = self.kernel(x)
+            array1  = np.ones((1,k1.shape[0]))
             x1 = np.vstack((k1,np.ones((1,x.shape[1]))))
             return self.w@x1
     #------------------------------------
@@ -65,7 +66,7 @@ class linearRegression():
     def loss(self,x,y):
         array1  = np.ones((1,x.shape[1]))
         x1 = np.vstack((x,array1))
-        loss = sum(y - ((self.w@x1)**2))/y.shape[0]
+        loss = sum((y - (self.w@x1))**2)/y.shape[0]
         return loss
     #------------------------------------
 
@@ -91,19 +92,15 @@ class linearRegression():
         return dist
     #------------------------------------
     def trainMatKernel(self):
-        
         ##gaussian時、wの更新
         if self.kernelType != "linear":
-            
+            #xtrainとxtrainのカーネル (200,200)
             K = self.kernel(self.x)
             array1 = np.ones((1,K.shape[1]))
             K1 = np.hstack((K,array1.T))
-            
             A=(K1.T@K1)
-            #対角成分に0.1を足す
             E = np.identity(A.shape[0])
             A = A+(E*0.1)
-
             a=(np.linalg.inv(A))@(np.sum((self.y*K1.T),1))
             self.w = a
     #------------------------------------
