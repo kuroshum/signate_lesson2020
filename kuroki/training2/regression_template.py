@@ -63,28 +63,27 @@ class linearRegression():
 	def calcDist(self, x, z):
 		xTile = np.tile(x.reshape(x.shape[1], 1, x.shape[0]), (1, z.shape[1], 1))
 		zTile = np.tile(z.reshape(1, z.shape[1], z.shape[0]), (x.shape[1], 1, 1))
+		# xTile = np.tile(x.reshape(1, x.shape[1], x.shape[0]), (z.shape[1], 1, 1))
+		# zTile = np.tile(z.reshape(z.shape[1], 1, z.shape[0]), (1, x.shape[1], 1))
 		dict = np.sqrt(np.sum((xTile - zTile) ** 2, axis=2))
 		return dict
 
 	def kernel(self, x):
-		K = np.exp(-self.calcDist(self.x, x)**2 / 2)
+		K = np.exp(-self.calcDist(self.x, x) / (2 * self.kernelParam**2))
 		return K
 
 	def trainMatKernel(self):
-		x_ = np.append(self.x, np.ones((1, self.x.shape[1])), axis=0)
-		x_ = self.kernel(x_)
-		# x_ = np.append(x_, np.ones((1, x_.shape[1], x_.shape[2])), axis=0)
+		x_ = self.kernel(self.x)
+		x_ = np.append(x_, np.ones((1, x_.shape[1])), axis=0)
 		x_x_T = np.matmul(x_, x_.T)
 		print(x_x_T.shape)
-		self.w = np.matmul(np.linalg.inv(x_x_T + np.eye(x_x_T.shape[0]) * 0.0001), np.sum(self.y * x_, axis=1))
-		# print(self.w)
+		x_x_T = x_x_T + np.eye(x_x_T.shape[0]) * 0.0001
+		self.w = np.matmul(np.linalg.inv(x_x_T), np.sum(self.y * x_, axis=1))
 
 	def predict4Kernel(self, x):
-		x_ = np.append(x, np.ones((1, x.shape[1])), axis=0)
-		x_ = self.kernel(x_)
-		# x_ = np.append(x_, np.ones((1, x_.shape[1], x_.shape[2])), axis=0)
+		x_ = self.kernel(x)
+		x_ = np.append(x_, np.ones((1, x_.shape[1])), axis=0)
 		y = np.matmul(self.w.T, x_)
-		print(y)
 		return y
 
 	def loss4Kernel(self, x, y):
