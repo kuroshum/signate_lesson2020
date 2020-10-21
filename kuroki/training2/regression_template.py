@@ -59,6 +59,37 @@ class linearRegression():
 		loss = np.sum((y - self.predict(x)) ** 2) / y.size
 		return loss
 	#------------------------------------
+
+	def calcDist(self, x, z):
+		xTile = np.tile(x.reshape(x.shape[1], 1, x.shape[0]), (1, z.shape[1], 1))
+		zTile = np.tile(z.reshape(1, z.shape[1], z.shape[0]), (x.shape[1], 1, 1))
+		# xTile = np.tile(x.reshape(1, x.shape[1], x.shape[0]), (z.shape[1], 1, 1))
+		# zTile = np.tile(z.reshape(z.shape[1], 1, z.shape[0]), (1, x.shape[1], 1))
+		dict = np.sqrt(np.sum((xTile - zTile) ** 2, axis=2))
+		return dict
+
+	def kernel(self, x):
+		K = np.exp(-self.calcDist(self.x, x) / (2 * self.kernelParam**2))
+		return K
+
+	def trainMatKernel(self):
+		x_ = self.kernel(self.x)
+		x_ = np.append(x_, np.ones((1, x_.shape[1])), axis=0)
+		x_x_T = np.matmul(x_, x_.T)
+		print(x_x_T.shape)
+		x_x_T = x_x_T + np.eye(x_x_T.shape[0]) * 0.0001
+		self.w = np.matmul(np.linalg.inv(x_x_T), np.sum(self.y * x_, axis=1))
+
+	def predict4Kernel(self, x):
+		x_ = self.kernel(x)
+		x_ = np.append(x_, np.ones((1, x_.shape[1])), axis=0)
+		y = np.matmul(self.w.T, x_)
+		return y
+
+	def loss4Kernel(self, x, y):
+		loss = np.sum((y - self.predict4Kernel(x)) ** 2) / y.size
+		return loss
+
 # �N���X�̒�`�I���
 #-------------------
 
@@ -67,12 +98,12 @@ class linearRegression():
 if __name__ == "__main__":
 	
 	# 1) �w�K���͎�����2�̏ꍇ�̃f�[�^�[����
-	myData = rg.artificial(200,100, dataType="1D")
-	# myData = rg.artificial(200,100, dataType="1D",isNonlinear=True)
+	# myData = rg.artificial(200, 100, dataType="1D")
+	myData = rg.artificial(200, 100, dataType="1D", isNonlinear=True)
 	
 	# 2) ���`��A���f��
-	#regression = linearRegression(myData.xTrain,myData.yTrain)
-	regression = linearRegression(myData.xTrain, myData.yTrain, kernelType="gaussian",kernelParam=1)
+	# regression = linearRegression(myData.xTrain, myData.yTrain)
+	regression = linearRegression(myData.xTrain, myData.yTrain, kernelType="gaussian", kernelParam=1)
 	
 	# 3) �w�K�iFor���Łj
 	sTime = time.time()
@@ -86,11 +117,16 @@ if __name__ == "__main__":
 	eTime = time.time()
 	print("train with matrix: time={0:.4} sec".format(eTime-sTime))
 
+	sTime = time.time()
+	regression.trainMatKernel()
+	eTime = time.time()
+	print("train with kernel: time={0:.4} sec".format(eTime - sTime))
+
 	# 5) �w�K�������f����p���ė\��
-	print("loss={0:.3}".format(regression.loss(myData.xTest, myData.yTest)))
+	print("loss={0:.3}".format(regression.loss4Kernel(myData.xTest, myData.yTest)))
 
 	# 6) �w�K�E�]���f�[�^����ї\�����ʂ��v���b�g
-	predict = regression.predict(myData.xTest)
+	predict = regression.predict4Kernel(myData.xTest)
 	myData.plot(predict,isTrainPlot=False)
 	
 #���C���̏I���
