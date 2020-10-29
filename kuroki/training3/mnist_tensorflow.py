@@ -50,7 +50,7 @@ def linear_regression(x_t, xDim, yDim, reuse=False):
         b = bias_variable('b', [yDim])
 
         # softmax回帰を実行
-        y = tf.nn.softmax(tf.add(tf.matmul(x_t, w), b))
+        y = tf.nn.softmax(tf.add(tf.matmul(x_t, w), b)) + 1e-10
 
         return y
 #--------------------------------------------------------------------------------
@@ -70,7 +70,6 @@ def classifier_model(x_t, xDim, yDim, reuse=False):
         return y
 
 #--------------------------------------------------------------------------------
-
 
 
 if __name__ == "__main__":
@@ -112,8 +111,10 @@ if __name__ == "__main__":
     # 損失関数(クロスエントロピー)
     # loss_square_train = tf.nn.softmax_cross_entropy_with_logits(labels=yData_train, logits=output_train)
     # loss_square_test = tf.nn.softmax_cross_entropy_with_logits(labels=yData_test, logits=output_test)
-    loss_square_train = -tf.reduce_sum(y_t * tf.log(output_train))
-    loss_square_test = -tf.reduce_sum(y_t * tf.log(output_test))
+    # loss_square_train = -tf.reduce_sum(y_t * tf.log(output_train))
+    # loss_square_test = -tf.reduce_sum(y_t * tf.log(output_test))
+    loss_square_train = tf.reduce_mean(-tf.reduce_sum(y_t * tf.log(output_train), reduction_indices=[1]))
+    loss_square_test = tf.reduce_mean(-tf.reduce_sum(y_t * tf.log(output_test), reduction_indices=[1]))
 
     # 最適化
     opt = tf.train.AdamOptimizer(learning_rate)
@@ -135,7 +136,7 @@ if __name__ == "__main__":
     loss_test_list = []
 
     # イテレーションの反復回数
-    nIte = 1000
+    nIte = 100
 
     # テスト実行の割合(test_rate回につき1回)
     test_rate = 10
@@ -151,11 +152,16 @@ if __name__ == "__main__":
     for ite in range(nIte):
         #-------------------------------------
         # ミニバッチ学習法を実装
-        _, loss_train = sess.run([training_step, loss_square_train], feed_dict={x_t: xData_train, y_t: yData_train})
+        sff_idx = np.random.permutation(num_data_train)
+        for idx in range(0, num_data_train, BATCH_SIZE):
+            batch_x = xData_train[sff_idx[idx: idx + BATCH_SIZE if idx + BATCH_SIZE < num_data_train else num_data_train]]
+            batch_y = yData_train[sff_idx[idx: idx + BATCH_SIZE if idx + BATCH_SIZE < num_data_train else num_data_train]]
+            _, loss_train = sess.run([training_step, loss_square_train], feed_dict={x_t: batch_x, y_t: batch_y})
         #-------------------------------------
         
         # 反復10回につき一回lossを表示
         if ite % test_rate == 0:
+            loss_train = sess.run(loss_square_train, feed_dict={x_t: xData_train, y_t: yData_train})
             #-------------------------------------
             # テスト時のlossを計算
             loss_test = sess.run(loss_square_test, feed_dict={x_t: xData_test, y_t: yData_test})
