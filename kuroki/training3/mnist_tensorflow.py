@@ -60,15 +60,26 @@ def linear_regression(x_t, xDim, yDim, reuse=False):
 def classifier_model(x_t, xDim, yDim, reuse=False):
     with tf.variable_scope('classifier_model') as scope:
         if reuse:
-            scope.reuse_variables()
-        
+            scope.reuse_variables()        
         #----------------------------------
         # 3階層のニューラルネットワークを実装
-
+        units1 = 100
+        w1 = weight_variable('w1', [xDim, units1])
+        b1 = bias_variable('b1', [units1])
+        hidden1 = tf.nn.softmax(tf.add(tf.matmul(x_t, w1), b1))
+        units2 = 100
+        w2 = weight_variable('w2', [units1, units2])
+        b2 = bias_variable('b2', [units2])
+        hidden2 = tf.nn.softmax(tf.add(tf.matmul(hidden1, w2), b2))
+        w3 = weight_variable('w3', [units2, yDim])
+        b3 = bias_variable('b3', [yDim])
+        y = tf.nn.softmax(tf.add(tf.matmul(hidden2, w3), b3)) + 1e-10
         #----------------------------------
         
         return y
 
+def accuracy(y, y_):
+    return tf.reduce_mean(tf.cast(tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1)), tf.float32))
 #--------------------------------------------------------------------------------
 
 
@@ -107,6 +118,8 @@ if __name__ == "__main__":
     # 線形回帰を実行
     output_train = linear_regression(x_t, xDim, yDim)
     output_test = linear_regression(x_t, xDim, yDim, reuse=True)
+    # output_train = classifier_model(x_t, xDim, yDim)
+    # output_test = classifier_model(x_t, xDim, yDim, reuse=True)
 
     # 損失関数(クロスエントロピー)
     # loss_square_train = tf.nn.softmax_cross_entropy_with_logits(labels=yData_train, logits=output_train)
@@ -148,6 +161,8 @@ if __name__ == "__main__":
     num_data_train = xData_train.shape[0]
     num_data_test = xData_test.shape[0]
     
+    res = accuracy(y_t, output_test)
+
     # 学習とテストの反復
     for ite in range(nIte):
         #-------------------------------------
@@ -182,3 +197,5 @@ if __name__ == "__main__":
         print(f'#{i * test_rate}, train loss : {losses[0]}')
         print(f'#{i * test_rate}, test loss : {losses[1]}')
     #--------------------------------------------------------------------------------
+
+    print(f'accuracy: {sess.run(res, feed_dict={x_t: xData_test, y_t: yData_test})}')
